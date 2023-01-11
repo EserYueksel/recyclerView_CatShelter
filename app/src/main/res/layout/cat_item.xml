@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EBEBD3">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cat_card"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.20">
+
+        <ImageView
+            android:id="@+id/cat_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@drawable/cat1" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/cat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textAppearance="@style/KatzTextStyle"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@+id/cat_card"
+        app:layout_constraintTop_toBottomOf="@+id/cat_card"
+        tools:text="Smirky" />
+
+    <TextView
+        android:id="@+id/cat_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAppearance="@style/KatzTextStyle"
+        app:layout_constraintStart_toStartOf="@+id/cat_name"
+        app:layout_constraintTop_toBottomOf="@+id/cat_name"
+        tools:text="34 Monate" />
+
+    <TextView
+        android:id="@+id/cat_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAppearance="@style/KatzTextStyle"
+        app:layout_constraintStart_toStartOf="@+id/cat_age"
+        app:layout_constraintTop_toBottomOf="@+id/cat_age"
+        tools:text="2,5 kg" />
+
+    <Button
+        android:id="@+id/cat_adopt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#DB804E"
+        android:fontFamily="@font/yatra_one"
+        android:text="adoptieren"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cat_card"
+        app:layout_constraintTop_toBottomOf="@+id/cat_weight" />
+
+    <Button
+        android:id="@+id/cat_donate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#DB804E"
+        android:fontFamily="@font/yatra_one"
+        android:text="spenden"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cat_card"
+        app:layout_constraintTop_toBottomOf="@+id/cat_weight" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
